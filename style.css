@@ -13,13 +13,8 @@ body {
   grid-template: 150px 1fr / 250px 1fr;
 }
 
-.header {
-  background-color: blue;
-  grid-area: 1 / 2 / 2 / -1;
-}
-
 .main-content {
-  background-color: rgb(209, 208, 208);
+  background-color: rgb(224, 223, 223);
 }
 
 .sidebar {
@@ -46,8 +41,8 @@ body {
   padding-left: 1rem;
 }
 
-.nav img,
-.support img {
+.sidebar-icon,
+.header-icon {
   height: 2rem;
 }
 
@@ -64,4 +59,54 @@ body {
 
 .sidebar img {
   filter: invert();
+}
+
+.header {
+  /* background-color: rgb(255, 255, 255); */
+  grid-area: 1 / 2 / 2 / -1;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+}
+
+.header .icon {
+  height: 2rem;
+}
+
+.search-bar,
+.profile-details {
+  padding: 2rem 3rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-bar {
+  flex: 1
+}
+
+.header-top {
+  display: flex;
+}
+
+input[type*="text"] {
+  background-color: rgb(224, 223, 223);
+  border: none;
+  height: 2.5rem;
+  border-radius: 1.5rem;
+}
+
+.profilepic {
+  border-radius: 50%;
+  height: 4rem
+}
+
+.profile-details {
+  font-size: 1.6rem;
+  gap: 3rem;
+  padding-right: 8rem;
+}
+
+.search-bar input {
+  flex-grow: 1;
+  max-width: 700px;
 }
