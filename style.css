@@ -10,12 +10,8 @@ html {
 body {
   height: 100vh;
   display: grid;
-  grid-template: 150px 1fr / 250px 1fr;
-  min-width: 940px;
-}
-
-.main-content {
-  background-color: rgb(224, 223, 223);
+  grid-template: 130px 1fr / 250px 1fr;
+  min-width: 950px;
 }
 
 .sidebar {
@@ -43,7 +39,8 @@ body {
 }
 
 .sidebar-icon,
-.header-icon {
+.header-icon,
+.card-icons{
   height: 2rem;
 }
 
@@ -126,7 +123,6 @@ input[type*="text"] {
   border: none;
   background-color: rgb(41, 110, 212);
   color: white;
-
 }
 
 .btn-container {
@@ -145,4 +141,122 @@ input[type*="text"] {
   flex: 1;
   padding-left: 2rem;
   font-size: 1.6rem;
+}
+
+.main-content {
+  background-color: rgb(224, 223, 223);
+  display: grid;
+  grid-template: 2rem 1fr / 1fr 300px;
+  padding: 2rem 1.6rem;
+  gap: 1rem;
+}
+
+.card-holder {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  grid-area: 2 / 1 / 4 / 2;
+  margin-right: 2rem;
+}
+
+.announcement-col {
+  grid-area: 2 / 2 / 4 / 3;
+  display: flex;
+  flex-direction: column;
+  grid-template-rows: 1fr 1fr;
+  justify-content: space-between;
+  
+}
+
+.announcement-holder,
+.trending-holder {
+  background-color: white;
+  padding: 2rem 2rem;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+}
+
+.announcement-holder {
+  flex: 1;
+  align-items: center;
+}
+
+.card {
+  background-color: white;
+  padding: 2rem 2rem;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  padding: 4rem 2rem;
+  border-left: 5px solid gold;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: end;
+  gap: 2rem;
+}
+
+.proj-header {
+  padding-bottom: 2rem;
+}
+
+.announ-header {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.announcement-holder {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.announcement {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.middle-announcement {
+  border-top: 1px solid hsl(0, 0%, 60%);
+  border-bottom: 1px solid hsl(0, 0%, 60%);
+  padding: 1rem 0rem;
+}
+
+.trend-super {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.trend-super h2{
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.trending-holder{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 2rem 2rem;
+}
+
+.trend img {
+  height: 4rem;
+}
+
+.trend {
+  display: flex;
+  align-items: center;
+}
+
+.announcement p,
+.trend p {
+  font-size: 1.2rem;
 }
